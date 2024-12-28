@@ -2,13 +2,17 @@
 import toast, { Toaster } from 'react-hot-toast';
 import s from './SearchBar.module.css'
 import { HiOutlineSearch } from 'react-icons/hi';
+import { SearchBarProps } from './SearchBar.types';
+import { FormEvent } from 'react';
 
-
-const SearchBar = ({ onSearchSubmit }) => {
-    const handleSubmit = (e) => {
+const SearchBar: React.FC<SearchBarProps>  = ({ onSearchSubmit }) => {
+    const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
-      const form = e.target;
-      const value = form.elements.search.value.trim();
+      const form = e.currentTarget;
+      const searchInput = form.elements.namedItem("search") as HTMLInputElement;
+      
+      const value = searchInput.value.trim();
+
       if (value === "") {
         return toast.error("Please enter a search query", {
           duration: 1500,
@@ -26,7 +30,7 @@ const SearchBar = ({ onSearchSubmit }) => {
           <input
             name="search"
             type="text"
-            placeholder="Search images and photos"
+            placeholder="Search images and photoes"
           />
           <button type="submit">
             <HiOutlineSearch />
