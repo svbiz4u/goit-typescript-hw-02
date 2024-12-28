@@ -1,0 +1,16 @@
+.btnShowMore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color:rgb(147, 198, 247); ;
+    color: rgb(252, 252, 252);
+    border: none;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    &:hover {
+      background-color: rgb(25, 141, 250);
+    }
+  }
