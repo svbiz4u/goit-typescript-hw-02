@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
-import { fetchImages } from './services/api';
+import { fetchImages } from '../../services/api';
 import './App.css'
-import SearchBar from './components/SearchBar/SearchBar';
-import ImageGallery from './components/ImageGalley/ImageGallery';
-import ErrorMessage from './components/ErrorMessage/ErrorMessage';
-import LoadMoreBtn from './components/LoadMoreBtn/LoadMoreBtn';
-import ImageModal from './components/ImageModal/ImageModal';
-import Loader from './components/Loader/Loader';
+import SearchBar from '../SearchBar/SearchBar';
+import ImageGallery from '../ImageGalley/ImageGallery';
+import ErrorMessage from '../ErrorMessage/ErrorMessage';
+import LoadMoreBtn from '../LoadMoreBtn/LoadMoreBtn';
+import ImageModal from '../ImageModal/ImageModal';
+import Loader from '../Loader/Loader';
 
 
 
